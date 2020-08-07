@@ -21,6 +21,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    }, 
+    "description": "A markteplace for selling the stuff you don't need."
   }
 }
