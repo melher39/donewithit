@@ -1,30 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { StyleSheet, Text, View, Image, SafeAreaView, TouchableNativeFeedback } from "react-native";
 
 export default function App() {
-  console.log("heyyyyy"); // test test
-  let x = 1;
-  // x.toString();
+  const handlePress = () => console.log("Text Pressed.");
+
   return (
-    <View style={styles.container}>
-      <Text>YO WHAT UP SON????</Text>
-      <Text>YO WHAT UP SON????</Text>
-      <Text>YO WHAT UP SON????</Text>
-      <Text>YO WHAT UP SON????</Text>
-      <Text>YO WHAT UP SON????</Text>
-      
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Text
+        numberOfLines={1}
+        onPress={handlePress}
+      >
+        Hello React Native
+      </Text>
+      <TouchableNativeFeedback onPress={() => console.log("tapped.")}>
+        <View
+        style={{width: 200, height: 70, backgroundColor: "dodgerblue"}}
+        >
+
+        </View>
+      </TouchableNativeFeedback>
+
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    backgroundColor: "#fff",
+    justifyContent: "center",
+    alignItems: "center"
+  }
 });
-
