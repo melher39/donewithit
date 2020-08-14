@@ -7,6 +7,8 @@ import {
     Image
 } from "react-native";
 
+import colors from "../config/colors.js"
+
 const WelcomeScreen = () => {
     return (
         <View style={styles.container}>
@@ -52,11 +54,11 @@ const styles = StyleSheet.create({
         height: "20%"
     },
     loginButton: {
-        backgroundColor: "#fc5c65",
+        backgroundColor: colors.primary,
         height: "15%"
     },
     registerButton: {
-        backgroundColor: "#4ECDC4",
+        backgroundColor: colors.secondary,
         height: "15%"
     }
 });

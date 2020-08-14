@@ -7,7 +7,7 @@ import ViewImageScreen from "./app/screens/ViewImageScreen.js";
 
 export default function App() {
   return (
-    // <WelcomeScreen />
-    <ViewImageScreen/>
+    <WelcomeScreen />
+    // <ViewImageScreen/>
   );
 }

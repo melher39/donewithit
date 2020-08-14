@@ -8,6 +8,8 @@ import {
     StatusBar
 } from "react-native";
 
+import colors from "../config/colors.js"
+
 const ViewImageScreen = () => {
 
     return (
@@ -26,7 +28,7 @@ const ViewImageScreen = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "black"
+        backgroundColor: colors.black
     },
     image: {
         // resizeMode: "contain",
@@ -34,7 +36,7 @@ const styles = StyleSheet.create({
         width: "100%"
     },
     closeSquare: {
-        backgroundColor: "#fc5c65",
+        backgroundColor: colors.primary,
         position: "absolute",
         top: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         left: 15,
@@ -42,7 +44,7 @@ const styles = StyleSheet.create({
         width: 50
     },
     deleteSquare: {
-        backgroundColor: "#4ECDC4",
+        backgroundColor: colors.secondary,
         position: "absolute",
         top: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         right: 15,
