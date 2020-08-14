@@ -13,6 +13,7 @@ const ViewImageScreen = () => {
     return (
         <SafeAreaView style={styles.container}>
             <Image
+                resizeMode="contain"
                 style={styles.image}
                 source={require("../assets/chair.jpg")}
             />
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
         backgroundColor: "black"
     },
     image: {
-        resizeMode: "contain",
+        // resizeMode: "contain",
         height: "100%",
         width: "100%"
     },
