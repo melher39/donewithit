@@ -7,7 +7,7 @@ import {
     Image
 } from "react-native";
 
-import colors from "../config/colors.js"
+import colors from "../config/colors.json";
 
 const WelcomeScreen = () => {
     return (
