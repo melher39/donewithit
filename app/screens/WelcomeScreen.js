@@ -6,6 +6,7 @@ import {
     Text,
     Image
 } from "react-native";
+import AppButton from "../components/AppButton.js";
 
 import colors from "../config/colors.json";
 
@@ -15,6 +16,7 @@ const WelcomeScreen = () => {
             <ImageBackground
                 style={styles.backgroundImage}
                 source={require("../assets/background.jpg")}
+                blurRadius={3}
             >
                 <View style={styles.logoSection}>
                     <Image
@@ -24,8 +26,8 @@ const WelcomeScreen = () => {
                     <Text>Sell What You Don't Need</Text>
                 </View>
                 <View style={styles.buttonSection}>
-                    <View style={styles.loginButton} />
-                    <View style={styles.registerButton} />
+                    <AppButton style={styles.loginButton}>LOGIN</AppButton>
+                    <AppButton style={styles.registerButton}>REGISTER</AppButton>
                 </View>
             </ImageBackground>
         </View>
@@ -37,7 +39,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     backgroundImage: {
-        flex: 1
+        flex: 1,
     },
     logoImage: {
         height: 100,
@@ -51,15 +53,15 @@ const styles = StyleSheet.create({
     buttonSection: {
         flex: 2,
         justifyContent: "flex-end",
-        height: "20%"
+        alignItems: "center"
     },
     loginButton: {
         backgroundColor: colors.primary,
-        height: "15%"
+        marginBottom: 20
     },
     registerButton: {
         backgroundColor: colors.secondary,
-        height: "15%"
+        marginBottom: 20
     }
 });
 
