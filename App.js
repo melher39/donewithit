@@ -10,6 +10,7 @@ import WelcomeScreen from "./app/screens/WelcomeScreen.js";
 
 import colors from "./app/config/colors.json";
 import AppCard from "./app/components/AppCard.js";
+import ViewImageScreen from "./app/screens/ViewImageScreen.js";
 
 export default function App() {
   return (
@@ -24,11 +25,12 @@ export default function App() {
       {/* <AppButton style={styles.primary}>
         LOGIN
     </AppButton> */}
-      <AppCard
+      {/* <AppCard
         title="Red jacket for sale!"
         subTitle="$100"
         image={require("./app/assets/jacket.jpg")}
-      />
+      /> */}
+      <ViewImageScreen/>
     </View >
 
   );
