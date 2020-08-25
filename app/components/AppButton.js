@@ -1,16 +1,16 @@
 import React from "react";
-import { TouchableHighlight, StyleSheet, Platform, Text } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
 
 import colors from "../config/colors.json";
 import AppText from "./AppText.js";
 
 const AppButton = ({ children, style, onPress }) =>
-    <TouchableHighlight
+    <TouchableOpacity
         style={[styles.button, style]}
         onPress={onPress}
     >
         <AppText style={styles.buttonText}>{children}</AppText>
-    </TouchableHighlight>
+    </TouchableOpacity>
 
 const styles = StyleSheet.create({
     button: {

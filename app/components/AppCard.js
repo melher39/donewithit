@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Image, StyleSheet, Platform, View } from "react-native";
+import { Text, Image, StyleSheet, View } from "react-native";
 import AppText from "./AppText";
 
 import colors from "../config/colors.json";
@@ -7,9 +7,8 @@ import colors from "../config/colors.json";
 const AppCard = ({ title, subTitle, image }) =>
     <View style={styles.card}>
         <Image
-            style={[styles.image]}
+            style={styles.image}
             source={image}
-            // resizeMode="contain"
         />
         <View style={styles.textArea}>
             <AppText style={styles.title}>{title}</AppText>
@@ -26,9 +25,7 @@ const styles = StyleSheet.create({
     },
     image: {
         height: 200,
-        width: "100%",
-        // borderTopRightRadius: 15,
-        // borderTopLeftRadius: 15
+        width: "100%"
     },
     textArea: {
         padding: 20
