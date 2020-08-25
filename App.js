@@ -9,6 +9,7 @@ import AppButton from "./app/components/AppButton.js";
 import WelcomeScreen from "./app/screens/WelcomeScreen.js";
 
 import colors from "./app/config/colors.json";
+import AppCard from "./app/components/AppCard.js";
 
 export default function App() {
   return (
@@ -19,10 +20,15 @@ export default function App() {
         color="dodgerblue"
       />
       <AppText>I love React Native</AppText> */}
-      <WelcomeScreen/>
+      {/* <WelcomeScreen/> */}
       {/* <AppButton style={styles.primary}>
         LOGIN
     </AppButton> */}
+      <AppCard
+        title="Red jacket for sale!"
+        subTitle="$100"
+        image={require("./app/assets/jacket.jpg")}
+      />
     </View >
 
   );
@@ -30,7 +36,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
     // justifyContent: "center",
     // alignItems: "center"
   }

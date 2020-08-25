@@ -3,10 +3,10 @@ import {
     View,
     ImageBackground,
     StyleSheet,
-    Text,
     Image
 } from "react-native";
 import AppButton from "../components/AppButton.js";
+import AppText from "../components/AppText.js";
 
 import colors from "../config/colors.json";
 
@@ -23,7 +23,7 @@ const WelcomeScreen = () => {
                         style={styles.logoImage}
                         source={require("../assets/logo-red.png")}
                     />
-                    <Text>Sell What You Don't Need</Text>
+                    <AppText style={styles.tagline}>Sell What You Don't Need</AppText>
                 </View>
                 <View style={styles.buttonSection}>
                     <AppButton style={styles.loginButton}>LOGIN</AppButton>
@@ -62,6 +62,10 @@ const styles = StyleSheet.create({
     registerButton: {
         backgroundColor: colors.secondary,
         marginBottom: 20
+    },
+    tagline: {
+        fontWeight: "bold",
+        marginTop: 20
     }
 });
 
