@@ -5,42 +5,40 @@ import AppText from "./AppText";
 import colors from "../config/colors.json";
 
 const AppCard = ({ title, subTitle, image }) =>
-    <View style={styles.view}>
+    <View style={styles.card}>
         <Image
             style={[styles.image]}
             source={image}
-            resizeMode="contain"
+            // resizeMode="contain"
         />
         <View style={styles.textArea}>
-            <AppText>{title}</AppText>
+            <AppText style={styles.title}>{title}</AppText>
             <AppText style={styles.subTitle}>{subTitle}</AppText>
         </View>
     </View>
 
 const styles = StyleSheet.create({
-    view: {
+    card: {
         backgroundColor: colors.white,
-        flex: 1,
-        alignItems: "center"
+        borderRadius: 15,
+        marginBottom: 20,
+        overflow: "hidden"
     },
     image: {
-        height: "80%",
+        height: 200,
         width: "100%",
-        flex: 1,
-        borderTopRightRadius: 25,
-        borderTopLeftRadius: 25
+        // borderTopRightRadius: 15,
+        // borderTopLeftRadius: 15
     },
     textArea: {
-        flex: 1,
-        alignSelf: "flex-start",
-        left: 80,
-        marginTop: 20
+        padding: 20
     },
     title: {
-
+        marginBottom: 7
     },
     subTitle: {
-        color: colors.secondary
+        color: colors.secondary,
+        fontWeight: "bold"
     }
 });
 
