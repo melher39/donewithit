@@ -16,7 +16,7 @@ const WelcomeScreen = () => {
             <ImageBackground
                 style={styles.backgroundImage}
                 source={require("../assets/background.jpg")}
-                blurRadius={3}
+                blurRadius={5}
             >
                 <View style={styles.logoSection}>
                     <Image
@@ -26,8 +26,18 @@ const WelcomeScreen = () => {
                     <AppText style={styles.tagline}>Sell What You Don't Need</AppText>
                 </View>
                 <View style={styles.buttonSection}>
-                    <AppButton style={styles.loginButton}>LOGIN</AppButton>
-                    <AppButton style={styles.registerButton}>REGISTER</AppButton>
+                    <AppButton
+                        style={styles.loginButton}
+                        onPress={()=> console.log("Tapped")}
+                    >
+                        LOGIN
+                    </AppButton>
+                    <AppButton
+                        style={styles.registerButton}
+                        onPress={()=> console.log("Tapped")}
+                    >
+                        REGISTER
+                    </AppButton>
                 </View>
             </ImageBackground>
         </View>
