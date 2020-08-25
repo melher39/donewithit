@@ -1,6 +1,5 @@
 import React from "react";
 import {
-    View,
     StyleSheet,
     Image,
     SafeAreaView,
@@ -11,28 +10,24 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import colors from "../config/colors.json";
 
-const ViewImageScreen = () => {
-
-    return (
-        <SafeAreaView style={styles.container}>
-            <Image
-                resizeMode="contain"
-                style={styles.image}
-                source={require("../assets/chair.jpg")}
-            />
-            <MaterialCommunityIcons
-                name="close"
-                size={30}
-                style={styles.closeSquare}
-            />
-            <MaterialCommunityIcons
-                name="trash-can-outline"
-                size={30}
-                style={styles.deleteSquare}
-            />
-        </SafeAreaView>
-    );
-};
+const ViewImageScreen = () =>
+    <SafeAreaView style={styles.container}>
+        <Image
+            resizeMode="contain"
+            style={styles.image}
+            source={require("../assets/chair.jpg")}
+        />
+        <MaterialCommunityIcons
+            name="close"
+            size={35}
+            style={styles.closeSquare}
+        />
+        <MaterialCommunityIcons
+            name="trash-can-outline"
+            size={35}
+            style={styles.deleteSquare}
+        />
+    </SafeAreaView>
 
 const styles = StyleSheet.create({
     container: {

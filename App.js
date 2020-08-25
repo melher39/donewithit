@@ -4,11 +4,11 @@ import {
   StyleSheet
 } from "react-native";
 
-import ListingDetailsScreen from "./app/screens/ListingDetailsScreen.js";
+import ViewImageScreen from "./app/screens/ViewImageScreen.js";
 
 export default function App() {
   return (
-    <ListingDetailsScreen />
+    <ViewImageScreen/>
   );
 };
 
