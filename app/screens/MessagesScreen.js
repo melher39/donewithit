@@ -1,8 +1,9 @@
 import React from "react";
-import { FlatList, StyleSheet } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 
 import ListItem from "../components/ListItem.js";
 import AppScreen from "../components/AppScreen.js";
+import ListItemSeparator from "../components/ListItemSeparator.js";
 
 const messages = [
     {
@@ -32,13 +33,14 @@ const MessagesScreen = () => {
                         image={item.image}
                     />
                 }
+                ItemSeparatorComponent={ListItemSeparator}
             />
         </AppScreen>
     );
 };
 
-// const styles = StyleSheet.create({
+const styles = StyleSheet.create({
 
-// });
+});
 
 export default MessagesScreen;
