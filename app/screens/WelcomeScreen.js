@@ -3,11 +3,12 @@ import {
     View,
     ImageBackground,
     StyleSheet,
-    Text,
     Image
 } from "react-native";
+import AppButton from "../components/AppButton.js";
+import AppText from "../components/AppText.js";
 
-import colors from "../config/colors.js"
+import colors from "../config/colors.json";
 
 const WelcomeScreen = () => {
     return (
@@ -15,17 +16,28 @@ const WelcomeScreen = () => {
             <ImageBackground
                 style={styles.backgroundImage}
                 source={require("../assets/background.jpg")}
+                blurRadius={5}
             >
                 <View style={styles.logoSection}>
                     <Image
                         style={styles.logoImage}
                         source={require("../assets/logo-red.png")}
                     />
-                    <Text>Sell What You Don't Need</Text>
+                    <AppText style={styles.tagline}>Sell What You Don't Need</AppText>
                 </View>
                 <View style={styles.buttonSection}>
-                    <View style={styles.loginButton} />
-                    <View style={styles.registerButton} />
+                    <AppButton
+                        style={styles.loginButton}
+                        onPress={()=> console.log("Tapped")}
+                    >
+                        LOGIN
+                    </AppButton>
+                    <AppButton
+                        style={styles.registerButton}
+                        onPress={()=> console.log("Tapped")}
+                    >
+                        REGISTER
+                    </AppButton>
                 </View>
             </ImageBackground>
         </View>
@@ -37,7 +49,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     backgroundImage: {
-        flex: 1
+        flex: 1,
     },
     logoImage: {
         height: 100,
@@ -51,15 +63,19 @@ const styles = StyleSheet.create({
     buttonSection: {
         flex: 2,
         justifyContent: "flex-end",
-        height: "20%"
+        alignItems: "center"
     },
     loginButton: {
         backgroundColor: colors.primary,
-        height: "15%"
+        marginBottom: 20
     },
     registerButton: {
         backgroundColor: colors.secondary,
-        height: "15%"
+        marginBottom: 20
+    },
+    tagline: {
+        fontWeight: "bold",
+        marginTop: 20
     }
 });
 

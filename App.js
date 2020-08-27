@@ -1,13 +1,22 @@
 import React from "react";
 import {
-  View
+  View,
+  StyleSheet
 } from "react-native";
-import WelcomeScreen from "./app/screens/WelcomeScreen.js";
+
 import ViewImageScreen from "./app/screens/ViewImageScreen.js";
 
 export default function App() {
   return (
-    <WelcomeScreen />
-    // <ViewImageScreen/>
+    <ViewImageScreen/>
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    // flex: 1,
+    backgroundColor: "#f8f4f4",
+    padding: 20,
+    paddingTop: 100
+  }
+});

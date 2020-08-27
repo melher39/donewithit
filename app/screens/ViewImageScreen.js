@@ -1,29 +1,33 @@
 import React from "react";
 import {
-    View,
     StyleSheet,
     Image,
     SafeAreaView,
     Platform,
     StatusBar
 } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import colors from "../config/colors.js"
+import colors from "../config/colors.json";
 
-const ViewImageScreen = () => {
-
-    return (
-        <SafeAreaView style={styles.container}>
-            <Image
-                resizeMode="contain"
-                style={styles.image}
-                source={require("../assets/chair.jpg")}
-            />
-            <View style={styles.closeSquare} />
-            <View style={styles.deleteSquare} />
-        </SafeAreaView>
-    );
-};
+const ViewImageScreen = () =>
+    <SafeAreaView style={styles.container}>
+        <Image
+            resizeMode="contain"
+            style={styles.image}
+            source={require("../assets/chair.jpg")}
+        />
+        <MaterialCommunityIcons
+            name="close"
+            size={35}
+            style={styles.closeSquare}
+        />
+        <MaterialCommunityIcons
+            name="trash-can-outline"
+            size={35}
+            style={styles.deleteSquare}
+        />
+    </SafeAreaView>
 
 const styles = StyleSheet.create({
     container: {
@@ -36,20 +40,16 @@ const styles = StyleSheet.create({
         width: "100%"
     },
     closeSquare: {
-        backgroundColor: colors.primary,
+        color: colors.white,
         position: "absolute",
         top: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-        left: 15,
-        height: 50,
-        width: 50
+        left: 15
     },
     deleteSquare: {
-        backgroundColor: colors.secondary,
+        color: colors.white,
         position: "absolute",
         top: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-        right: 15,
-        height: 50,
-        width: 50
+        right: 15
     }
 });
 
