@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList, StyleSheet, View } from "react-native";
+import { FlatList, StyleSheet } from "react-native";
 
 import ListItem from "../components/ListItem.js";
 import AppScreen from "../components/AppScreen.js";
@@ -15,7 +15,7 @@ const messages = [
     {
         id: 2,
         title: "T2",
-        description: "D3",
+        description: "D2",
         image: require("../assets/mosh.jpg")
     }
 ];
