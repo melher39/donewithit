@@ -5,11 +5,12 @@ import {
 } from "react-native";
 
 import ViewImageScreen from "./app/screens/ViewImageScreen.js";
-import MessagesScreen from "./app/screens/MessagesScreen.js";
+import WelcomeScreen from "./app/screens/WelcomeScreen.js";
 
 export default function App() {
   return (
-    <MessagesScreen/>
+    // <ViewImageScreen/>
+    <WelcomeScreen/>
   );
 };
 
