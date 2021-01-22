@@ -9,13 +9,14 @@ import {
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import colors from "../config/colors.json";
+import chairImg from "../assets/chair.jpg";
 
 const ViewImageScreen = () =>
     <SafeAreaView style={styles.container}>
         <Image
             resizeMode="contain"
             style={styles.image}
-            source={require("../assets/chair.jpg")}
+            source={chairImg}
         />
         <MaterialCommunityIcons
             name="close"

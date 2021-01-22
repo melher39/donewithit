@@ -4,15 +4,17 @@ import {
     View,
     Image
 } from "react-native";
+
 import AppText from "../components/AppText";
 import ListItem from "../components/ListItem.js";
-
 import colors from "../config/colors.json";
+import jacketImg from "../assets/jacket.jpg";
+import moshImg from "../assets/mosh.jpg";
 
-const ListingDetailsScreen = (props) =>
+const ListingDetailsScreen = props =>
     <View>
         <Image
-            source={require("../assets/jacket.jpg")}
+            source={jacketImg}
             style={styles.image}
         />
         <View style={styles.textArea}>
@@ -24,7 +26,7 @@ const ListingDetailsScreen = (props) =>
             </AppText>
             <View style={styles.userContainer}>
                 <ListItem
-                    image={require("../assets/mosh.jpg")}
+                    image={moshImg}
                     title="Mosh Hamedami"
                     subTitle="5 Listings"
                 />

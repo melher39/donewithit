@@ -3,22 +3,24 @@ import {
     FlatList,
     StyleSheet
 } from "react-native";
+
 import ListItem from "../components/ListItem.js";
 import AppScreen from "../components/AppScreen.js";
 import ListItemSeparator from "../components/ListItemSeparator.js";
+import moshImg from "../assets/mosh.jpg";
 
 const messages = [
     {
         id: 1,
         title: "T1",
         description: "D1",
-        image: require("../assets/mosh.jpg")
+        image: moshImg
     },
     {
         id: 2,
         title: "T2",
         description: "D2",
-        image: require("../assets/mosh.jpg")
+        image: moshImg
     }
 ];
 
@@ -42,8 +44,8 @@ const MessagesScreen = () => {
     );
 };
 
-const styles = StyleSheet.create({
+// const styles = StyleSheet.create({
 
-});
+// });
 
 export default MessagesScreen;

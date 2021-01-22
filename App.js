@@ -1,16 +1,19 @@
 import React from "react";
 import {
-  View,
   StyleSheet
 } from "react-native";
 
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen.js";
+import MessagesScreen from "./app/screens/MessagesScreen.js";
 import ViewImageScreen from "./app/screens/ViewImageScreen.js";
 import WelcomeScreen from "./app/screens/WelcomeScreen.js";
 
 export default function App() {
   return (
     // <ViewImageScreen/>
-    <WelcomeScreen/>
+    // <WelcomeScreen/>
+    // <ListingDetailsScreen/>
+    <MessagesScreen/>
   );
 };
 

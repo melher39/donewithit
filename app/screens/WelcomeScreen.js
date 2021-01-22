@@ -5,9 +5,11 @@ import {
     StyleSheet,
     Image
 } from "react-native";
+
 import AppButton from "../components/AppButton.js";
 import AppText from "../components/AppText.js";
-
+import bgImg from "../assets/background.jpg";
+import redLogo from "../assets/logo-red.png";
 import colors from "../config/colors.json";
 
 const WelcomeScreen = () => {
@@ -15,13 +17,13 @@ const WelcomeScreen = () => {
         <View style={styles.container}>
             <ImageBackground
                 style={styles.backgroundImage}
-                source={require("../assets/background.jpg")}
+                source={bgImg}
                 blurRadius={5}
             >
                 <View style={styles.logoSection}>
                     <Image
                         style={styles.logoImage}
-                        source={require("../assets/logo-red.png")}
+                        source={redLogo}
                     />
                     <AppText style={styles.tagline}>Sell What You Don't Need</AppText>
                 </View>
