@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         backgroundColor: colors.black
     },
     image: {
-        // resizeMode: "contain",
+        resizeMode: "contain",
         height: "100%",
         width: "100%"
     },
@@ -53,6 +53,5 @@ const styles = StyleSheet.create({
         right: 15
     }
 });
-
 
 export default ViewImageScreen;

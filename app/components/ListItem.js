@@ -43,6 +43,6 @@ const styles = StyleSheet.create({
     subTitle: {
         color: colors.medium
     }
-})
+});
 
 export default ListItem;
