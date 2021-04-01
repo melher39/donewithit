@@ -1,7 +1,7 @@
 import React from "react";
 import {
     FlatList,
-    StyleSheet
+    // StyleSheet
 } from "react-native";
 
 import ListItem from "../components/ListItem.js";
